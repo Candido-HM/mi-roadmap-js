@@ -3,4 +3,4 @@
 // Imprimir un mensaje en consola.
 console.log("¡Hello word!");
 
-console.log("Preparando roadmap para aprender JavaScript");
+console.log("Preparando mi roadmap para aprender JavaScript....");
