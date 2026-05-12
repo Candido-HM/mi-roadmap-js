@@ -26,11 +26,14 @@ z = b--;
 console.log(z);
 console.log(b);
 
-// Precedencia de operadores
-let s = 3, d = 2, f = 1;
+//********************  Precedencia de operadores ************************
+let s = 3, d = 2, f = 1, g = 4;
 
 //En este caso la mutiplicación toma prioridad antes de relizar la suma (el resultado es el mismo para ambos ejemplos)
-let x = s * d + f;
+let x = s * d + f / g;
 console.log(x)
-x = f + s * d;
+x = f + s * d / g;
 console.log(x);
+//Se puede modificar el orden las operaciones usando ()
+z = (f + s) * d / f;
+console.log(z);
