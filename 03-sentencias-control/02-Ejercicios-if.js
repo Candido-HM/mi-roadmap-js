@@ -22,7 +22,7 @@ let esVIP = true;
 let estaBaneado = false;
 let messageAcceso;
 
-if ( (tieneBoleto || esVIP ) && !estaBaneado) {
+if ((tieneBoleto || esVIP ) && !estaBaneado) {
     messageAcceso = "Acceso concedido";
 } else {
     messageAcceso = "Acceso denegado";
