@@ -137,11 +137,11 @@ class Computadora {
     }
 
     set teclado(teclado) {
-        this._teclado = this.teclado;
+        this._teclado = teclado;
     }
 
     get mouse() {
-        return this._teclado;
+        return this._mouse;
     }
 
     set mouse(mouse) {
