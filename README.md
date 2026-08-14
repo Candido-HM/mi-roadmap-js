@@ -7,3 +7,8 @@
 4. Ciclos
 5. Arreglos
 6. Funciones
+7. Objetos
+8. Clases
+9. Proyectos
+10. Programación Orientada Objeto
+11. Manejo Errores
