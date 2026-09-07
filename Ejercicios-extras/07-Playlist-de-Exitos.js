@@ -17,4 +17,5 @@ function reproducirTopCanciones(listaCanciones, limite) {
 }
 
 let misFavoritas = ["The Nights", "Outro", "Midnight City", "I Will Follow You"];
-reproducirTopCanciones(misFavoritas,3)
+reproducirTopCanciones(misFavoritas,3);
+reproducirTopCanciones(misFavoritas,5);
