@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='cabecero'>Ejemplo DOM con JavaScript</h1>
+    <p id='parrafo'>Saludos!</p>
+    <p id="parrafo1">Parrafo 1</p>
+    <p id="parrafo2">Otro parrafo</p>
+    <ul id="listaVelas"></ul>
+    <ol id="insumoVelas"></ol>
+    
+    <script>
+        console.log('SALUDOS DESDE LA CONSOLA JAVASCRIPT');
+        let cabecero = document.getElementById('cabecero');
+        console.log(`valor cabecero: ${cabecero.innerHTML}`);
+        let parrafo = document.getElementById('parrafo');
+        console.log(`valor parrafo: ${parrafo.innerHTML}`);
+        parrafo.innerHTML = 'Nuevo valor del parrafo';
+        cabecero.innerHTML = 'Nuevo Cabecero';
+        //Ejercicio de mi autoria jeje
+        let lista = ['Cirio grande', 'Vela chica', 'Minicirio', 'Candle cera abeja'];
+        let insumoList = ['Pabilo', 'Fragancias', 'Moldes', 'Porta Mecha', 'Pigmentos'];
+        let htmlAcomulado = '';
+        for(let i =  0; i < lista.length; i++) {
+            // console.log('valor:' +lista[i]);
+            listaVelas.innerHTML += `<li>${lista[i]}</li>`;
+        }
+
+        insumoList.forEach(insumo => {
+            htmlAcomulado += `<li>${insumo}</li>`;
+        });
+        insumoVelas.innerHTML = htmlAcomulado;
+
+        let parrafos = document.getElementsByTagName('p');
+        console.log(`No. parrafos: ${parrafos.length}`)
+        for(let i = 0; i<parrafos.length; i++) {
+            console.log(`Parrafo ${i + 1}: ${parrafos[i].innerHTML}`);
+        }
+    </script>
+</body>
+</html>
