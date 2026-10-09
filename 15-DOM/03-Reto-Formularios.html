@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Formularios</title>
+</head>
+<body>
+    <h1>Cotizador de velas</h1>
+    <form id="cotizador">
+        <input type="text" name="tipoVela" placeholder="Tipo de vela">
+        <br>
+        <input type="number" name="cantidad" placeholder="Cantidad">
+        <br>
+        <input type="number" name="precioUnitario" placeholder="Precio por pieza">
+        <br>
+    </form>
+    <button type="button" onclick="calcularCotizacion()">Cotizar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularCotizacion() {
+            let formulario = document.forms['cotizador'];
+
+            let tipo = formulario['tipoVela'].value.trim();
+            let cantidad = Number(formulario['cantidad'].value);
+            let precio = Number(formulario['precioUnitario'].value);
+            let resultado = document.getElementById('resultado');
+
+            if(tipo !== '' && cantidad !== 0 && precio !== 0){
+                let total = cantidad * precio;
+                resultado.innerHTML = `Resumen de Cotización: <br>
+                Producto: ${tipo} <br>
+                Cantidad: ${cantidad} <br>
+                Total a cobrar: ${total}`;
+            } else {
+                resultado.innerHTML = 'Colocar datos correctos';
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
