@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de contenido DOM</title>
+</head>
+<body>
+    <h1 id="titulo">Contenido DOM</h1>
+    <button onclick="mostrar()">Cambiar titulo</button>
+    <h2>Cambio de atributos</h2>
+    <img id="imagen" style="width: 250px;" src="https://res.cloudinary.com/dhwbvncoq/image/upload/v1776389320/Artisan/cirio-dic4-2025_tzhgjg.webp">
+    <button onclick="cambiarImg()">Cambiar Imagen</button>
+    <h3 id="titulo3">Cambiar estilos</h3>
+    <button onclick="cambioStyle()">Cambiar Estilo</button>
+    <script>
+        function mostrar(){
+            document.getElementById('titulo').innerHTML += '<br> Nuevo Titulo';
+        }
+
+        function cambiarImg() {
+            document.getElementById('imagen').src = 'https://res.cloudinary.com/dhwbvncoq/image/upload/v1760558538/Artisan/cirio-oct5-2025_svy0eo.webp';
+        }
+
+        function cambioStyle() {
+            document.getElementById('titulo3').style.color = 'blue';    
+        }
+    </script>
+</body>
+</html>

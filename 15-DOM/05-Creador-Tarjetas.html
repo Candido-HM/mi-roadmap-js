@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Tarjetas</title>
+    <style>
+        body{
+            margin: auto;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        section{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        form{
+            padding-left: 15px;
+        }
+        #mostrar{
+            background-color: rgb(149, 167, 167);
+            margin-left: 20px;
+        }
+        .section-card{
+            width: 500px;
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizar Tarjeta</h1>
+    <section>
+        <div id="mostrar">
+            <div class="section-card">
+                <figure>
+                    <img width="150px" id="imgCard" src="https://xochicera.pages.dev/hero-cirio.webp">
+                </figure>
+                <div class="inf-card">
+                    <h2 id="titulo">Cirio perzonalizado</h2>
+                    <p id="descripcion">
+                        Cirio perzonalizado con flores 3d en la corona, con velas de cera de abeja
+                        y una altura de 2 metros con 20cm.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form id="formulario">
+                <h4>Ingresa datos</h4>
+                <input type="text" name="nombre" placeholder="Ingresar tipo">
+                <br><br>
+                <input type="text" name="descripcion" placeholder="Descripción">
+                <br><br>
+                <input type="text" name="urlImg" placeholder="Ingresar URl imagen">
+            </form>
+            <br><br>
+            <button type="button" onclick="mostrar()">Mostrar</button>
+            <button type="button" onclick="limpiar()">Limpiar</button>
+        </div>
+    </section>
+
+    <script>
+        let formulario = document.forms['formulario'];
+        function mostrar(){
+            
+            let nombre = formulario['nombre'].value.trim();
+            let descripcion = formulario['descripcion'].value;
+            let imgUrl = formulario['urlImg'].value;
+            console.log('El nombre es:'+nombre);
+            if(nombre !== ''){
+                document.getElementById('titulo').innerHTML = nombre;
+            }
+            if(descripcion !== ''){
+                document.getElementById('descripcion').innerHTML = descripcion;
+            }
+            if(imgUrl !== ''){
+                document.getElementById('imgCard').src = imgUrl;
+            }
+        }
+
+        function limpiar(){
+            formulario['nombre'].value = '';
+            formulario['descripcion'].value = '';
+            formulario['urlImg'].value = '';
+        }
+    </script>
+</body>
+</html>

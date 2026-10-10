@@ -19,7 +19,9 @@
     <p class="azul">Soy el tercer parrafo</p>
     <ul id="listaVelas"></ul>
     <ol id="insumoVelas"></ol>
-    
+    <label>DEMO USO DE WRITE</label>
+    <br>
+    <button onclick="mostrar()">Mostrar</button>
     <script>
         console.log('SALUDOS DESDE LA CONSOLA JAVASCRIPT');
         let cabecero = document.getElementById('cabecero');
@@ -59,6 +61,11 @@
         for(let vario of varios){
             console.log(`${vario.innerHTML}`);
         } 
+
+        document.write('Saludos desde JavaScript');
+        function mostrar() {
+            document.write('Adiosss');
+        }
     </script>
 </body>
 </html>
