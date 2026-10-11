@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onChange</title>
+</head>
+<body>
+    <h1>Evento OnChange</h1>
+    <br>
+    Nombre: <input type="text" id="nombre" onchange="convertir(this)">
+    <script>
+        function convertir(nombreInput) {
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>
