@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento addEventListener</title>
+</head>
+<body>
+    <h1 id="titulo">Evento addEventListener</h1>
+    <br><br>
+    Nombre: <input type="text" id="nombre">
+    <br><br>
+    Apellido: <input type="text" id="apellido">
+    <br><br>
+    <form id="formulario">
+        <input type="text" placeholder="titulo">
+        <br><br>
+        <input type="text" placeholder="descripcion">
+    </form>
+    <script>
+
+        const forma = document.getElementById('formulario');
+        forma.addEventListener('focus', (evento) => {
+            evento.target.style.background = 'pink';
+        }, true);
+        forma.addEventListener('blur', (evento) => {
+            evento.target.style.background = 'white';
+        }, true);
+
+        document.getElementById('nombre').addEventListener('focus', (evento) => {
+            evento.target.style.background = 'pink';
+        });
+        document.getElementById('nombre').addEventListener('blur', (evento) => {
+            evento.target.style.background = 'white';
+        });
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+
+        function cambiar(evento) {
+            let componente = evento.target;
+            componente.style.background = 'yellow';
+        }
+
+        function regresar(evento){
+            evento.target.style.background = 'white';
+        }
+    </script>
+</body>
+</html>

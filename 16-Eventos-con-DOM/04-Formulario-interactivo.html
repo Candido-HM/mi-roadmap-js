@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Interactivo</title>
+</head>
+<body>
+    <h1>Formulario de contacto</h1>
+    <div id="mensajeAyuda"></div>
+    <form id="formulario">
+        <input type="text" placeholder="Nombre del cliente" 
+            onfocus="amarillo(this, 'Escribe tu nombre completo para el recibo')" onblur="original(this)">
+        <br><br>
+        <textarea id="descripcion" placeholder="Detalle vela" 
+            onfocus="amarillo(this, 'Describe el tipo de producto que necesitas.')" onblur="original(this)"></textarea>
+    </form>
+
+    <script>
+        function amarillo(inputElement, mensaje) {
+            inputElement.style.background = 'yellow';
+            document.getElementById('mensajeAyuda').innerHTML = mensaje;
+        }
+        function original(inputElement) {
+            inputElement.style.background = 'white';
+            document.getElementById('mensajeAyuda').innerHTML = '';
+        }
+    </script>
+</body>
+</html>;
